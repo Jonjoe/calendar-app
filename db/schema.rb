@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170510000142) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
+    t.datetime "date"
     t.integer "timeslot"
     t.text "name"
     t.text "description"
