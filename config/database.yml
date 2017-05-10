@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: 'localhost'
+  username: <%= ENV["PG_USERNAME"] %>
+  password: <%= ENV["PG_PASSWORD"] %>
+
+development:
+  <<: *default
+  database: calendar_app_dev
+
+test:
+  <<: *default
+  database: calendar_app_test
+
+production:
+  <<: *default
+  database: calendar_app_production
