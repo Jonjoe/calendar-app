@@ -23,6 +23,9 @@
     "gulp": "^3.9.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0",
     "webpack": "^2.5.1"
   }
 }
