@@ -10,7 +10,7 @@ class Calendar extends Component {
 
 		let daysRender = []
 
-		for(var i = 0; i < daysCount; i++) {
+		for(var i = 1; i <= daysCount; i++) {
 			daysRender.push((<CalendarItem day={i} key={i}/>))
 		}
 		
