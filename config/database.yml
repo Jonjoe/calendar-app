@@ -1,0 +1,18 @@
+default: &default   	
+  adapter: postgresql   
+  pool: 5   
+  timeout: 5000   
+  username: <%= ENV["PG_USERNAME"] %>   
+  password: <%= ENV["PG_PASSWORD"] %>  
+
+development:   
+  <<: *default   
+  database: cal_dev  
+
+test:   
+  <<: *default   
+  database: cal_test  
+
+production:   
+  <<: *default   
+  database: cal_production
