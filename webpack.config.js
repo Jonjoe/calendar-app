@@ -22,9 +22,10 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: 'babel-loader'
 			},
-			{
-				test: /\.scss$/,
-				loader: 'style!css!sass?modules&localIdentName=[name]---[local]---[hash:base64:5]'      }	
+			{ 
+				test: /\.css$/, 
+				loader: "style-loader!css-loader" 
+			}
 		]
 	}
 }
