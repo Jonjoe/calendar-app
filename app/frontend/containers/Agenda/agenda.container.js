@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
-import AgendaItem from '../../components/agendaItem' 
+import AgendaItem from '../../components/AgendaItem' 
 import './styles.css'
 
 class Agenda extends Component {

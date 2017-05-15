@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 
-import Calendar from './containers/calendar'
-import Agenda from './containers/agenda'
+import Calendar from '../../containers/Calendar'
+import Agenda from '../../containers/Agenda'
 
-import './global.css'
+import '../../stylesheets/global.css'
+
 class App extends Component {
 	render() {
 		return(

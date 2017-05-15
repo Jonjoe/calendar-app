@@ -8,7 +8,7 @@ import {
 	bindActionCreators
 } from 'redux'
 	
-import CalendarItem from '../../components/calendarItem'
+import CalendarItem from '../../components/CalendarItem'
 
 import {
 	selectDay,

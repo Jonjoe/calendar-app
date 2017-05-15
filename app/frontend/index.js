@@ -14,7 +14,8 @@ import {
 	createStore
 } from 'redux'
 
-import App from './app'
+import App from './components/App'
+
 import reducer from './reducers'
 
 const store = createStore(
