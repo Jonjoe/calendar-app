@@ -1,6 +1,6 @@
 const INITIAL_STATE = {}  
 
-const appReducer = (state=INITIAL_STATE, action) => {   
+const agendaReducer = (state=INITIAL_STATE, action) => {   
 	if (action.type === 'PLACEHOLDER') {
 		return state;
 	} else {
@@ -8,4 +8,4 @@ const appReducer = (state=INITIAL_STATE, action) => {
 	}
 }
 
-export default appReducer
+export default agendaReducer

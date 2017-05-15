@@ -12,7 +12,7 @@ class Agenda extends Component {
 			const name = 'item name'
 			const description = 'item description'
 
-			renderedAgenda.push((<AgendaItem name={name} desc={description} />))
+			renderedAgenda.push((<AgendaItem key={i} name={name} desc={description} />))
 		}
 
 		return renderedAgenda
