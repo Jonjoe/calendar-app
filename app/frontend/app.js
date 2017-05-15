@@ -1,9 +1,13 @@
 import React, {Component} from 'react'
+import Calendar from './containers/calendar'
 
 class App extends Component {
 	render() {
 		return(
-			<p>This is the app</p>
+			<main>
+				<h1>Calendar</h1>
+				<Calendar />
+			</main>
 		)
 	}
 }
