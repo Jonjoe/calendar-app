@@ -3,7 +3,8 @@ const now = new DateTime
 
 const INITIAL_STATE = {
 	day: now.theDay(),
-	month: now.theMonth() 
+	month: now.theMonth(), 
+	events: null
 }  
 
 const calendarReducer = (state=INITIAL_STATE, action) => {   
