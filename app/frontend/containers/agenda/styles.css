@@ -1,6 +1,11 @@
 .Agenda {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
 	max-width: 40%;
 	min-width: 200px;
+	
 	display: flex;
 	flex-direction: column;	
 }
