@@ -2,17 +2,22 @@ import DateTime from '../../utilities/dateTime.class'
 const now = new DateTime
 
 const INITIAL_STATE = {
-	day: now.theDay(),
-	month: now.theMonth(), 
-	events: null
-}  
+	current: {
+		day: now.theDay(),
+		month: now.theMonth(), 
+		daysInMonth: now.countThisMonthsDays()
+	},
+	activeDay: null,
+	days: []
+}
 
 const calendarReducer = (state=INITIAL_STATE, action) => {   
-	if (action.type === 'PLACEHOLDER') {
-		return state;
-	} else {
-		return state;
+	switch(action.type){
+	case 'DAYS_SET':
+		return action.payload
 	}
+	
+	return state;
 }
 
 export default calendarReducer

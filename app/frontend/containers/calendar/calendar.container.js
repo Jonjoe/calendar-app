@@ -1,7 +1,20 @@
 import React, {Component} from 'react'
-import {connect} from 'react-redux'
 
+import {
+	connect,
+} from 'react-redux'
+
+import {
+	bindActionCreators
+} from 'redux'
+	
 import CalendarItem from '../../components/calendarItem'
+
+import {
+	selectDay,
+	setMonthsDays
+} from '../../actions'
+
 import './styles.css'
 
 class Calendar extends Component {
@@ -9,35 +22,24 @@ class Calendar extends Component {
 		super(props)
 	}
 
+	componentDidMount() {
+		let days = []
+
+		for(var i = 1; i <= this.props.current.daysInMonth; i++) {
+			days.push({
+				date: i,
+			 	events: []	
+			})
+		}
+	}
+
 	_getItemClass(day) {
 		let typeClass = ''
-		
-		
-		switch(day) {
-			
-		}
-		
-
+		switch(day) {}
 		return typeClass
 	}
 
 	_renderDays(){
-		const now = new Date
-		const daysCount = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate()
-
-		let daysRender = []
-
-		for(var i = 1; i <= daysCount; i++) {
-			daysRender.push((
-				<CalendarItem 
-					typeClass={this._getItemClass(i)} 
-					day={i} 
-					key={i}
-				/>
-			))
-		}
-		
-		return daysRender
 	}
 	
 	render(){
@@ -53,8 +55,16 @@ class Calendar extends Component {
 
 function mapStateToProps(state) {
 	return {
-		events: state.calendar.events
+		current: state.calendar.current,
+		days: state.calendar.days
 	} 
 }
 
-export default connect(mapStateToProps)(Calendar)
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({
+		selectDay: selectDay,
+		setMonthsDays: setMonthsDays
+	})
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Calendar)

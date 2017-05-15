@@ -1,30 +1,27 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
 import AgendaItem from '../../components/agendaItem' 
-
 import './styles.css'
+
 class Agenda extends Component {
-	_renderAgenda() {
-		const slots = 24
-		let renderedAgenda = []
-		
-		for(let i = 1; i <= slots; i++) {
-			const name = 'item name'
-			const description = 'item description'
-
-			renderedAgenda.push((<AgendaItem key={i} name={name} desc={description} />))
-		}
-
-		return renderedAgenda
-	}
-
 	render() {
-		return( 
-			<ul className="Agenda">
-				{this._renderAgenda()}
-			</ul>
-		)
+		if(!this.props.day) {
+			return <div> No day selected ... </div>
+		} else {
+			return ( 
+				<ul className="Agenda">
+					<li>Agenda</li>
+				</ul>
+			)
+		}
 	}
 }
 
-export default Agenda
+function mapStateToProps(state) {
+	return {
+		day: state.calendar.activeDay
+	}
+}
+
+export default connect(mapStateToProps)(Agenda)

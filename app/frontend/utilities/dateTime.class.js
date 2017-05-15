@@ -27,6 +27,10 @@ class DateTime {
 	theMonth() {
 		return this.monthNames()[this.now.getMonth()]		
 	}
+	
+	countThisMonthsDays() {
+		return new Date(this.now.getFullYear(), this.now.getMonth()+1, 0).getDate();
+	}
 }
 
 export default DateTime
