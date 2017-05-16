@@ -35,14 +35,17 @@ This should have provided you with a database containing calendar entries. You c
 ### Points of interest
 
 **Database Seeding**
+
 Here I have implimented a faker library to generate fake enrties with some interesting date logic.
 `https://github.com/Jonjoe/calendar-app/blob/master/db/seeds.rb`
 
 **Frontend**
-The Froontend of the application starts here. 
+
+The Frontend of the application starts here. 
 `https://github.com/Jonjoe/calendar-app/tree/master/app/frontend`
 
 **API**
+
 A good little internal API was created to support the Frontend in recieving data. 
 ```
 ```
