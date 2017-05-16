@@ -8,6 +8,9 @@ export const FETCH_EVENTS_REJECTED = 'FETCH_EVENTS_REJECTED'
 export const FETCH_EVENTS_FULFILLED = 'FETCH_EVENTS_FULFILLED'
 
 export const FETCH_AGENDA = 'FETCH_AGENDA'
+export const FETCH_AGENDA_REJECTED = 'FETCH_AGENDA_REJECTED'
+export const FETCH_AGENDA_FULFILLED = 'FETCH_AGENDA_FULFILLED'
+export const SET_AGENDA_DATE = 'SET_AGENDA_DATE'
 
 const conn = {
 	url: 'http://localhost:3000/api/v1'
@@ -31,9 +34,15 @@ export function fetchAgenda(day) {
 	
 	return {
 		type: FETCH_AGENDA,
-		payload: {
-			day: Datetime.ify(theDay),
-			data: request
-		}
+		payload: request
+	}
+}
+
+export function setAgendaDate(day) {
+	const date = Datetime.constructDate(day)
+
+	return {
+		type: SET_AGENDA_DATE,
+		payload: date
 	}
 }

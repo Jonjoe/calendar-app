@@ -52,8 +52,20 @@ class DateTime {
 		return this.monthNames()[this.now.getMonth()]		
 	}
 
+	todaysDate() {
+		return this.constructDate()
+	}
+
 	theYear() {
 		return this.now.getFullYear()
+	}
+
+	constructDate(
+		day=this.now.getDate(), 
+		month=(this.now.getMonth() + 1), 
+		year=this.now.getFullYear()) {
+
+		return `${day}/${month}/${year}`
 	}
 	
 	countThisMonthsDays() {

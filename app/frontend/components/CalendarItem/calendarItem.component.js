@@ -10,16 +10,22 @@ import {
 
 
 import {
-	fetchAgenda
+	fetchAgenda,
+	setAgendaDate
 } from '../../actions'
 
 import './styles.css'
 
 class CalendarItem extends Component {
-	render() {
+	_callAgenda() {
+		this.props.fetchAgenda(this.props.day)
+		this.props.setAgendaDate(this.props.day)
+	}
+
+	render() {	
 		return (
 			<li
-				onClick={() => this.props.fetchAgenda(this.props.day)}
+				onClick={() => this._callAgenda()}
 				className="Calendar__Item">
 				{this.props.day}
 			</li>
@@ -29,7 +35,8 @@ class CalendarItem extends Component {
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({
-		fetchAgenda
+		fetchAgenda,
+		setAgendaDate
 	}, dispatch)
 }
 
