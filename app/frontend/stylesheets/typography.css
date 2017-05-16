@@ -1,0 +1,49 @@
+h1 {
+	font-family: "Open Sans"; 	
+	font-size: 40px; 	
+	font-style: normal; 	
+	font-variant: normal; 	
+	font-weight: 500;
+	line-height: 26.4px; 
+}
+
+h1.light {
+	color:white;
+}
+
+h1.dark {
+	color: #8D93BE;	
+}
+
+h3 { 	
+	font-family: "Open Sans"; 	
+	font-size: 14px; 	
+	font-style: normal; 	
+	font-variant: normal; 
+	font-weight: 500;
+	line-height: 15.4px;
+} 
+
+p, a, li, span {
+	font-family: "Open Sans"; 	
+	font-size: 14px; 
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+} 
+
+blockquote { 	
+	font-family: "Open Sans"; 	
+	font-size: 21px; 	
+	font-style: normal; 	
+	font-variant: normal; 	
+	font-weight: 400; 	
+	line-height: 30px; 
+}
+
+span.small {
+	color: #DADADD;
+	font-size: 10px;
+}
+

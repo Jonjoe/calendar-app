@@ -1,8 +1,11 @@
 .Calendar__Item {
-	height: 100px;
-	width: 100px;
-
+	height: 14.285%;
+	width: 20%;
 	display: flex;
+	background: white;
+	padding: 2px;
+	box-sizing: border-box;
+	box-shadow: 10px 10px 68px -1px rgba(0,0,0,0.2);
 }
 
 .Calendar__Item--inPast {

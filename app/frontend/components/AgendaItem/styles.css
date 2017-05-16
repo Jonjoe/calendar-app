@@ -1,0 +1,7 @@
+.Agenda__Item {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px 10px;
+	background: white;
+	border-bottom:2px solid #DFE0E1;
+}

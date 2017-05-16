@@ -20,6 +20,18 @@ class DateTime {
 		]
 	}
 
+	weekdays(day) {
+		return [
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday",
+			"Sunday"
+		]
+	}
+
 	ify(day) {
 		const st = [1,21,31]
 		const nd = [2, 22]
@@ -43,6 +55,8 @@ class DateTime {
 	theDay() {
 		return this.now.getDate()
 	}
+
+
 	
 	theMonth() {
 		return this.now.getMonth() + 1		
@@ -50,6 +64,10 @@ class DateTime {
 
 	theMonthName() {
 		return this.monthNames()[this.now.getMonth()]		
+	}
+
+	theDayName() {
+		return this.weekdays()[this.now.getDay()]
 	}
 
 	todaysDate() {

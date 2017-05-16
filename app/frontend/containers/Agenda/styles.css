@@ -4,8 +4,17 @@
 	margin: 0;
 
 	max-width: 40%;
+	width: 100%;
 	min-width: 200px;
-	
+	max-height: 100vh;	
+	height: 100vh;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;	
+}
+
+.Agenda--landing {
+	background: #4D59A1;
+	color: white;
+	padding: 20px;
 }
