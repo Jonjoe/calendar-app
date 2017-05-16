@@ -40,6 +40,11 @@ This should have provided you with a database containing calendar entries. You c
 Here I have implimented a faker library to generate fake enrties with some interesting date logic.
 `https://github.com/Jonjoe/calendar-app/blob/master/db/seeds.rb`
 
+**Utility Classes**
+
+The app does alot with dates. I becided to roll my own little lib for handling dates and dealing with the little neiche bits and bobs. Worth a look! 
+`https://github.com/Jonjoe/calendar-app/blob/master/app/frontend/utilities/dateTime.class.js`
+
 **Frontend**
 
 The Frontend of the application starts here. 
