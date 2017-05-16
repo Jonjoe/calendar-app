@@ -25,7 +25,15 @@ class DateTime {
 	}
 	
 	theMonth() {
+		return this.now.getMonth() + 1		
+	}
+
+	theMonthName() {
 		return this.monthNames()[this.now.getMonth()]		
+	}
+
+	theYear() {
+		return this.now.getFullYear()
 	}
 	
 	countThisMonthsDays() {

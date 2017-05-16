@@ -12,7 +12,6 @@ import CalendarItem from '../../components/CalendarItem'
 
 import {
 	fetchEvents,
-	getAgenda
 } from '../../actions'
 
 import './styles.css'
@@ -30,11 +29,7 @@ class Calendar extends Component {
 		let days = []
 		for(var i = 1; i <= 31; i++) {
 			days.push((
-				<CalendarItem 
-					key={i} 
-					day={i}
-				 	onClick={this.getAgenda()}	
-				/>
+				<CalendarItem key={i} day={i} onClick={()=>{console.log('aids')}}/>
 			))
 		}
 
@@ -59,8 +54,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({
-		fetchEvents,
-		getAgenda
+		fetchEvents
 	}, dispatch)
 }
 

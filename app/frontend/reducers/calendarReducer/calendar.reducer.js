@@ -1,5 +1,4 @@
 import {
-	SET_CALENDAR,
 	FETCH_EVENTS
 } from '../../actions'
 

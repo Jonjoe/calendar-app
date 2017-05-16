@@ -21,11 +21,11 @@ end
 	while not days_used.include? day
 		puts "---- day #{day} used ... recycling"
 		day = new_day()
-
+		
 		unless days_used.include? day
 			days_used.push(day)
 			puts "---- new day is #{day}"
-		end 
+		end
 	end
 		
 	formatted_day = Date.parse("#{day}/#{Time.now.month}/#{Time.now.year}")
