@@ -2,11 +2,13 @@ import {
 	combineReducers
 } from 'redux'
 
-import appReducer from './appReducer'  
+import settingsReducer from './settingsReducer'  
 import calendarReducer from './calendarReducer'  
+import agendaReducer from './agendaReducer'  
 
 const reducer = combineReducers({
-	settings: appReducer,
+	agenda: agendaReducer,
+	settings: settingsReducer,
 	calendar: calendarReducer
 })  
 

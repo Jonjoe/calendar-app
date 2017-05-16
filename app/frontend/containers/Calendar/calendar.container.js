@@ -11,8 +11,8 @@ import {
 import CalendarItem from '../../components/CalendarItem'
 
 import {
-	selectDay,
-	setMonthsDays
+	fetchEvents,
+	getAgenda
 } from '../../actions'
 
 import './styles.css'
@@ -23,31 +23,28 @@ class Calendar extends Component {
 	}
 
 	componentDidMount() {
+		this.props.fetchEvents()
+	}
+
+	_renderDays() {
 		let days = []
-
-		for(var i = 1; i <= this.props.current.daysInMonth; i++) {
-			days.push({
-				date: i,
-			 	events: []	
-			})
+		for(var i = 1; i <= 31; i++) {
+			days.push((
+				<CalendarItem 
+					key={i} 
+					day={i}
+				 	onClick={this.getAgenda()}	
+				/>
+			))
 		}
+
+		return days
 	}
 
-	_getItemClass(day) {
-		let typeClass = ''
-		switch(day) {}
-		return typeClass
-	}
-
-	_renderDays(){
-	}
-	
 	render(){
-		console.log(this.props.events)
-
 		return (
 			<ul className="Calendar">
-				{this._renderDays()}	
+				{this._renderDays()}
 			</ul>
 		)
 	}
@@ -55,16 +52,16 @@ class Calendar extends Component {
 
 function mapStateToProps(state) {
 	return {
-		current: state.calendar.current,
-		days: state.calendar.days
-	} 
+		settings: state.settings,
+		calendar: state.calendar
+	}
 }
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({
-		selectDay: selectDay,
-		setMonthsDays: setMonthsDays
-	})
+		fetchEvents,
+		getAgenda
+	}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calendar)
