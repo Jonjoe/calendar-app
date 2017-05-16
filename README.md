@@ -48,6 +48,25 @@ The Frontend of the application starts here.
 
 A good little internal API was created to support the Frontend in recieving data. 
 ```
+           Prefix Verb   URI Pattern                                    Controller#Action
+             root GET    /                                              home#index
+           events GET    /events(.:format)                              events#index
+                  POST   /events(.:format)                              events#create
+        new_event GET    /events/new(.:format)                          events#new
+       edit_event GET    /events/:id/edit(.:format)                     events#edit
+            event GET    /events/:id(.:format)                          events#show
+                  PATCH  /events/:id(.:format)                          events#update
+                  PUT    /events/:id(.:format)                          events#update
+                  DELETE /events/:id(.:format)                          events#destroy
+    api_v1_events GET    /api/v1/events(.:format)                       api/v1/events#index
+                  POST   /api/v1/events(.:format)                       api/v1/events#create
+ new_api_v1_event GET    /api/v1/events/new(.:format)                   api/v1/events#new
+edit_api_v1_event GET    /api/v1/events/:id/edit(.:format)              api/v1/events#edit
+     api_v1_event GET    /api/v1/events/:id(.:format)                   api/v1/events#show
+                  PATCH  /api/v1/events/:id(.:format)                   api/v1/events#update
+                  PUT    /api/v1/events/:id(.:format)                   api/v1/events#update
+                  DELETE /api/v1/events/:id(.:format)                   api/v1/events#destroy
+api_v1_events_day GET    /api/v1/events/day/:day/:month/:year(.:format) api/v1/events#day
 ```
 Some good points of interest are:
 - `http://localhost:3000/api/v1/events/day/:DAY/:MONTH/:YEAR` This returns JSON containing the days events
