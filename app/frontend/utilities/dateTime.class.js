@@ -20,6 +20,26 @@ class DateTime {
 		]
 	}
 
+	ify(day) {
+		const st = [1,21,31]
+		const nd = [2, 22]
+		const rd = [3, 23]
+		
+		if(st.indexOf(day)){
+			return `${day}st`
+		}
+
+		if(nd.indexOf(day)){
+			return `${day}nd`
+		}
+
+		if(rd.indexOf(day)){
+			return `${day}rd`
+		}
+
+		return `${day}th`
+	}
+
 	theDay() {
 		return this.now.getDate()
 	}

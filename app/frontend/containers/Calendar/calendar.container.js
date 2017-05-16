@@ -29,7 +29,7 @@ class Calendar extends Component {
 		let days = []
 		for(var i = 1; i <= 31; i++) {
 			days.push((
-				<CalendarItem key={i} day={i} onClick={()=>{console.log('aids')}}/>
+				<CalendarItem key={i} day={i} />
 			))
 		}
 

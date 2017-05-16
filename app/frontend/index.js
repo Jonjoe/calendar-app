@@ -10,7 +10,9 @@ import {
 	Provider
 } from 'react-redux'
 
-import ReduxPromise from 'redux-promise'
+import logger from 'redux-logger'
+import thunk from 'redux-thunk'
+import promise from 'redux-promise-middleware'
 
 import {
 	composeWithDevTools
@@ -26,7 +28,7 @@ import App from './components/App'
 import reducer from './reducers'
 
 const store = createStore(reducer, composeWithDevTools(
-	applyMiddleware(ReduxPromise) 
+	applyMiddleware(promise(), thunk, logger) 
 ));
 
 render(

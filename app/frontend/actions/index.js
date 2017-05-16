@@ -1,9 +1,12 @@
 import axios from 'axios'
 
 import DateTime from '../utilities/dateTime.class'
-const now = new DateTime
+const Datetime = new DateTime
 
-export const FETCH_EVENTS = 'FETCH_WEATHER'
+export const FETCH_EVENTS = 'FETCH_EVENTS'
+export const FETCH_EVENTS_REJECTED = 'FETCH_EVENTS_REJECTED'
+export const FETCH_EVENTS_FULFILLED = 'FETCH_EVENTS_FULFILLED'
+
 export const FETCH_AGENDA = 'FETCH_AGENDA'
 
 const conn = {
@@ -21,13 +24,16 @@ export function fetchEvents() {
 
 export function fetchAgenda(day) {
 	const theDay = parseInt(day)
-	const theMonth = now.theMonth()
-	const theYear = now.theYear()
+	const theMonth = Datetime.theMonth()
+	const theYear = Datetime.theYear()
 
 	const request = axios.get(`${conn.url}/events/day/${theDay}/${theMonth}/${theYear}`)
 	
 	return {
 		type: FETCH_AGENDA,
-		payload: request
+		payload: {
+			day: Datetime.ify(theDay),
+			data: request
+		}
 	}
 }

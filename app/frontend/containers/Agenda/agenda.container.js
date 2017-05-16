@@ -6,21 +6,14 @@ import './styles.css'
 
 class Agenda extends Component {
 	render() {
-		if(!this.props.day) {
-			return <div> No day selected ... </div>
-		} else {
-			return ( 
-				<ul className="Agenda">
-					<li>Agenda</li>
-				</ul>
-			)
-		}
+		return <h3>agenda</h3>
 	}
 }
 
 function mapStateToProps(state) {
 	return {
-		day: state.calendar.activeDay
+		agenda: state.agenda,
+		settings: state.settings
 	}
 }
 
