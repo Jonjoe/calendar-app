@@ -30,7 +30,8 @@ $ bin/rails db:seed
 ```
 This should have provided you with a database containing calendar entries. You can confirm this by running `$ bin/rails c` & then `Event.fist`. If you output a database record you have succeeded. 
 
-8. Navigate to http://localhost:3000 & click around the calendar. 
+8. `$ webpack`
+9. Navigate to http://localhost:3000 & click around the calendar. 
 
 ### Points of interest
 
